@@ -1,0 +1,146 @@
+@charset "utf-8";
+html { color: #444; background: #fff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body, div, span, a, del, img, small, strong, sub, sup, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, label, legend, input, button, textarea, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; }
+html, body { font: 400 14px proxima-nova,"Hiragino Sans GB","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Microsoft YaHei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp"; font-smooth:always;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-stroke: 1px transparent;}
+pre{font-family:  proxima-nova,"Hiragino Sans GB","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Microsoft YaHei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp"; font-smooth:always;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-stroke: 1px transparent;}
+input, button, textarea { font: 400 14px/1 Helvetica, Arial, Tahoma, 'WenQuanYi Micro Hei', 'Microsoft YaHei', 'Hiragino Sans GB','黑体', sans-serif; color: #666;}
+/* button, select, textarea { font-size: 100%; }使得表单元素在 ie 下能继承字体大小 */
+/*input[type="text"], input[type="password"] { font-size: 100%; }*/
+input{width: auto;}
+table { border-spacing: 0; border-collapse: collapse;}
+fieldset, img { border: 0; }
+img { -ms-interpolation-mode: bicubic; vertical-align: middle; }
+del { text-decoration: line-through; }
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: 400; }
+ul, ol, li { list-style: none; }
+a{color: #2b81dc;}
+a:hover,a:focus { text-decoration: none; }
+ins, a { text-decoration: none; outline: none; }
+a:focus,:focus { outline: none; }
+small { font-size: 12px; }
+b{font-weight: normal;}
+blockquote{border-left: 6px solid #247fdf;padding-left: 10px; color: #247fdf;font-size: 16px;margin: 20px 0;position:relative;}
+blockquote em{position:absolute; background:#247fdf;color:#fff;right:-30px; top:-10px; padding:5px 8px;border-radius:2px;font-size:12px;}
+
+
+input, textarea,select { outline: none; -webkit-apperence:none; vertical-align: middle;}
+textarea { resize: vertical; line-height: 20px; border-radius: 5px; padding:8px 10px;border: 1px solid #999;}
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both }
+.clearfix { zoom: 1; *clear:both;
+}
+i{font-style: normal;font-family: 'iconfont';}
+input[type="checkbox"]{vertical-align: inherit}
+.mir { letter-spacing : -1000em; text-indent : -999em; overflow : hidden; }
+/* Just for Opera, but hide from MacIE */
+/*\*/html>body .mir { letter-spacing : normal; text-indent : -999em; overflow : hidden; }
+/* End of hack */
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$blue:                            #0078C1 !default;
+$lightBlue:                      #11c1f3 !default;
+$green:                           #33cd5f !default;
+$yellow:                         #ffc900 !default;
+$red:                             #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+$gray:                            #ccc !default;
+$lightGray:                      #f5f5f5 !default;
+$positive:                        #2f3340 !default;
+$grayBorder:                     #f0efef !default;
+
+@mixin set-color($bgColor:#E6E6E6, $textColor:#333) {
+  color: $textColor;
+  background-color: $bgColor;
+  border: 1px solid darken($bgColor, 5%);
+  border-color: lighten($bgColor, 2%) darken($bgColor, 5%) darken($bgColor, 5%) lighten($bgColor, 2%);
+}
+.fullpage{
+  width: 100%;height: 100%;background: url("../images/banner1.jpg") no-repeat; background-attachment: fixed;
+}
+
+.banner{
+  overflow: auto;
+   width: 100%; height: 100%; background-size: cover; background-position: center ;
+  .personalInfo{
+    background-color: #edf4fc;width: 400px; margin:auto;
+    .map{
+      background: url("../images/mapbg@2x.png") no-repeat; background-size: cover; width: 400px;height: 200px;
+    }
+    .info{
+      h2{ text-align: center; }
+    }
+  }
+}
+
+.content{
+  width: 90%;margin:20px auto; padding: 20px; background-color: rgba(255,255,255,.8);
+}
+
+.timeline{
+  position: relative;
+  &:before{
+    content: '';position: absolute;top: 0;bottom: 0;width: 2px;background: #E5E5E5;left: 200px;
+  }
+  li{
+    position: relative; display: flex; flex-flow: row; margin: 20px 0;
+    .time{
+      display: block; width: 160px;
+      span,em{
+        display: block; text-align: right;
+      }
+      span{
+        font-size:16px; font-style: italic;
+      }
+      em{
+        i{
+          font-size: 18px;
+        }
+      }
+    }
+    .icon{
+      width: 40px;height: 40px;
+      margin:0 20px;  speak: none;     font-size: 1.4em;      line-height: 40px;
+      color: #fff;
+      background: #FFC900;
+      box-shadow: 0 0 0 5px rgba(255, 202, 0,0.3);
+      border-radius: 50%;
+      text-align: center;
+    }
+    .label{
+      color: #fff;background-color: #FFC900;      padding: 2em;      font-size: 1.2em;      font-weight: 300;      line-height: 1.4;      position: relative;
+      border-radius: 5px; display: flex; flex-flow: column; flex: 1;
+      &:after{
+        right: 100%;border:10px solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;  top: 10px;border-right-color: #FFC900;
+      }
+    }
+    &:nth-child(2){
+      .icon{
+        background: #52BDFF;box-shadow: 0 0 0 5px rgba(82, 189, 255, 0.3);
+      }
+      .label{
+        background-color: #52BDFF;
+        &:after{
+          border-right-color: #52BDFF;
+        }
+      }
+    }
+  //
+    &:nth-child(3){
+      .icon{
+        background: #FF6F3E;box-shadow: 0 0 0 5px rgba(255, 111, 62, 0.3);
+      }
+      .label{
+        background-color: #FF6F3E;
+        &:after{
+          border-right-color: #FF6F3E;
+        }
+      }
+    }
+  //
+
+  }
+}
+
+
