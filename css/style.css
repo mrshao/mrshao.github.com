@@ -145,23 +145,23 @@ html > body .mir {
   height: 100%;
   background-size: cover;
   background-position: center; }
-  .banner .personalInfo {
-    background-color: #edf4fc;
-    width: 400px;
-    margin: auto; }
-    .banner .personalInfo .map {
-      background: url("../images/mapbg@2x.png") no-repeat;
-      background-size: cover;
-      width: 400px;
-      height: 200px; }
-    .banner .personalInfo .info h2 {
-      text-align: center; }
 
 .content {
   width: 90%;
   margin: 20px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8); }
+
+.personalInfo {
+  background: url("../images/header.jpg") no-repeat;
+  background-size: 88px;
+  padding-left: 100px;
+  min-height: 88px; }
+  .personalInfo h1 {
+    font-size: 20px; }
+  .personalInfo li i {
+    display: inline-block;
+    width: 60px; }
 
 .timeline {
   position: relative; }
