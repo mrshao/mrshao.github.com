@@ -207,8 +207,8 @@ html > body .mir {
       border-radius: 50%;
       text-align: center; }
     .timeline li .label {
+      background-image: linear-gradient(222deg, #FFC900 0, #FFA32B 33%, #FFD60D 47%, #FFA32B 84%, #FFC900 100%);
       color: #fff;
-      background-color: #FFC900;
       padding: 2em;
       font-size: 1.2em;
       font-weight: 300;
@@ -227,20 +227,32 @@ html > body .mir {
         position: absolute;
         pointer-events: none;
         top: 10px;
-        border-right-color: #FFC900; }
+        border-right-color: #FFA32B; }
     .timeline li:nth-child(2) .icon {
-      background: #52BDFF;
-      box-shadow: 0 0 0 5px rgba(82, 189, 255, 0.3); }
+      background: #671878;
+      box-shadow: 0 0 0 5px rgba(103, 24, 120, 0.3); }
     .timeline li:nth-child(2) .label {
-      background-color: #52BDFF; }
+      background-image: linear-gradient(222deg, #ff272d 0, #c42482 33%, #ab217f 47%, #671878 84%, #4a1475 100%); }
       .timeline li:nth-child(2) .label:after {
-        border-right-color: #52BDFF; }
+        border-right-color: #671878; }
     .timeline li:nth-child(3) .icon {
-      background: #FF6F3E;
-      box-shadow: 0 0 0 5px rgba(255, 111, 62, 0.3); }
+      background: #0078C1;
+      box-shadow: 0 0 0 5px rgba(0, 120, 193, 0.3); }
     .timeline li:nth-child(3) .label {
-      background-color: #FF6F3E; }
+      background-image: linear-gradient(222deg, #4a1475 0, #0078C1 100%); }
       .timeline li:nth-child(3) .label:after {
-        border-right-color: #FF6F3E; }
+        border-right-color: #2464b2; }
+
+.guangshu {
+  background: url(../images/banner3.jpg) no-repeat;
+  animation: gaoguang 8s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+@keyframes gaoguang {
+  0% {
+    background-position: 50% 0%; }
+  100% {
+    background-position: 100% 100%; } }
 
 /*# sourceMappingURL=style.css.map */
