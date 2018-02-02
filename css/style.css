@@ -175,9 +175,10 @@ html > body .mir {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 1px;
     background: #E5E5E5;
-    left: 200px; }
+    left: 200px;
+    background-image: linear-gradient(0deg, #0078C1 0, #FFC900 100%); }
   .timeline li {
     position: relative;
     display: flex;
