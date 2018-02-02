@@ -1,5 +1,5 @@
 @charset "utf-8";
-html { color: #444; background: #fff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { color: #444; background: #fff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; }
 body, div, span, a, del, img, small, strong, sub, sup, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, label, legend, input, button, textarea, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; }
 html, body { font: 400 14px proxima-nova,"Hiragino Sans GB","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Microsoft YaHei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp"; font-smooth:always;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-stroke: 1px transparent;}
 pre{font-family:  proxima-nova,"Hiragino Sans GB","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei","Microsoft YaHei","Apple LiGothic Medium",SimHei,"ST Heiti","WenQuanYi Zen Hei Sharp"; font-smooth:always;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-webkit-text-stroke: 1px transparent;}
@@ -90,7 +90,8 @@ $grayBorder:                     #f0efef !default;
 .timeline{
   position: relative;
   &:before{
-    content: '';position: absolute;top: 0;bottom: 0;width: 2px;background: #E5E5E5;left: 200px;
+    content: '';position: absolute;top: 0;bottom: 0;width: 1px;background: #E5E5E5;left: 200px;
+    background-image: linear-gradient(0deg,#0078C1 0,#FFC900 100%);
   }
   li{
     position: relative; display: flex; flex-flow: row; margin: 20px 0;
@@ -118,32 +119,36 @@ $grayBorder:                     #f0efef !default;
       text-align: center;
     }
     .label{
-      color: #fff;background-color: #FFC900;      padding: 2em;      font-size: 1.2em;      font-weight: 300;      line-height: 1.4;      position: relative;
+      background-image: linear-gradient(222deg,#FFC900 0, #FFA32B 33%, #FFD60D 47%,#FFA32B 84%,#FFC900 100%);
+      color: #fff;padding: 2em;      font-size: 1.2em;      font-weight: 300;      line-height: 1.4;      position: relative;
       border-radius: 5px; display: flex; flex-flow: column; flex: 1;
       &:after{
-        right: 100%;border:10px solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;  top: 10px;border-right-color: #FFC900;
+        right: 100%;border:10px solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;  top: 10px;
+        border-right-color: #FFA32B;
       }
     }
     &:nth-child(2){
       .icon{
-        background: #52BDFF;box-shadow: 0 0 0 5px rgba(82, 189, 255, 0.3);
+        background: #671878;box-shadow: 0 0 0 5px rgba(103, 24, 120, 0.3);
       }
       .label{
-        background-color: #52BDFF;
+        background-image: linear-gradient(222deg,#ff272d 0,#c42482 33%,#ab217f 47%,#671878 84%,#4a1475 100%);
+        //background-color: #671878;
         &:after{
-          border-right-color: #52BDFF;
+          border-right-color: #671878;
         }
       }
     }
   //
     &:nth-child(3){
       .icon{
-        background: #FF6F3E;box-shadow: 0 0 0 5px rgba(255, 111, 62, 0.3);
+        background: #0078C1;box-shadow: 0 0 0 5px rgba(0, 120, 193, 0.3);
       }
       .label{
-        background-color: #FF6F3E;
+        background-image: linear-gradient(222deg,#4a1475 0,#0078C1 100%);
+        //background-color: #FF6F3E;
         &:after{
-          border-right-color: #FF6F3E;
+          border-right-color: #2464b2;
         }
       }
     }
@@ -153,3 +158,14 @@ $grayBorder:                     #f0efef !default;
 }
 
 
+.guangshu {
+  background:url(../images/banner3.jpg) no-repeat;
+  animation:gaoguang 8s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gaoguang {
+  0%{background-position: 50% 0%;}
+  100%{background-position: 100% 100%;}
+}
